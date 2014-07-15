@@ -13,6 +13,7 @@ a.behavior{
 	position: fixed;
 	z-index: 1;
 	&.suscribir{
+		z-index: 2;
 		background: url(../assets/caja_azul.png) no-repeat;
 		padding: 17px 96px 44px 19px;
 		top: 0px;
@@ -22,6 +23,7 @@ a.behavior{
 		}
 	}
 	&.siguenos{
+		z-index: 2;
 		background: url(../assets/azul_rect.png) no-repeat;
 		padding: 0px 103px 172px 0px;
 		top: 0;
@@ -47,15 +49,16 @@ a.behavior{
 	}
 }
 nav{
-	position: fixed;
+	position: absolute;
 	z-index: 1;
+	float: left;
 	ul{
 		list-style: none;
-		margin-top: 121px;
+		margin-top: 60px;
 		font-size: 23px;
 		font-family: sans-serif;
 		li{
-			margin: 74px 0px 0px 135px;
+			margin: 70px 0px 0px 05px;
 			height: 50px;
 			padding-left: 70px;
 			position: relative;
@@ -106,19 +109,17 @@ nav{
 		}
 	}
 }
-img{
-	&.home{
-		padding: 0px 0px 0px 1107px;
-		position: fixed;
-		bottom: 0;
-	}
-}
-section{
+section {
+	background-size: cover;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	position: relative;
+	
 	img {
+		width: 80%;
+		height: 100%;
+		padding-left: 100px;
 
 	}
 
@@ -133,47 +134,71 @@ section{
 		text-align: right;
 	}
 	&#home{
-		background: url(../assets/fondo.jpg) repeat;
+		background: url(../assets/patron-rojo.png) repeat;
 	}
 	&#films{
-		background: url(../assets/fondo_rojo.png) no-repeat;
+		background: url(../assets/patron-rojo.png) repeat;
 	}
 	&#contenidos{
-		background: url(../assets/fondo_naranja.png) no-repeat;
+		background: url(../assets/patron-naranja.png) repeat;
 	}
 	&#dospuntouno{
-		background: url(../assets/fondo_amarillo.png) no-repeat;
+		background: url(../assets/patron-amarillo.png) repeat;
 	}
 	&#cnk{
-		background: url(../assets/fondo_azul.jpg) no-repeat;
+		background: url(../assets/patron-azul.png) repeat;
 	}
 	&#merida{
-		background: url(../assets/fondo_verde.jpg) no-repeat;
+		background: url(../assets/patron-verde.png) repeat;
 	}
 	video{
 		&.bgvid{
 			position: absolute;
-			top: 57px;
-			left: 55px;
-			width: 90%;
-			height: 90%;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
 			background: url(../assets/videos/contenidos.jpg) no-repeat;
 			background-size: cover;
 			margin: auto;
+			z-index: -1;
 		}
 	}
 	.content{
-		background: #000;
-		width: 867px;
-		height: 731px;
+		background: url(../assets/fondo-lineas.png) no-repeat;
+		width: 1150px;
+		height: 750px;
 		margin: auto;
-		position: absolute;
+		position: relative;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-	}
-}
+		.cont2 {
+			background:  #fff;
+			position: absolute;
+			top: 22px;
+			width: 1150px;
+			height: 706px;
+			.carnita{
+				z-index: 1;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				.home{
+				position: absolute;
+				width: 140px;
+				height: 90px;
+				margin-top: 626px;
+				margin-left: 913px; 
+				z-index: 2;
+				}
+			}
+		}
+	}	
+}								
 .rotate(){
 	-webkit-transform: rotate(-90deg);
 }

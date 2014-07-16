@@ -4,25 +4,26 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/less" href="styles/style.less">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+		<script src="./scripts/lib/skrollr.min.js"></script>
 	</head>
 	<body>
-		<a href="#" class="behavior suscribir"><span>Suscribete</span></a>
-		<a href="#" class="behavior siguenos"><span>Siguenos</span></a>
-		<a href="#" class="behavior compartir"><span>Comparte</span></a>
-		<section id="home">
+		<a href="#" class="behavior"></a>
+		<a href="#" class="behavior"></a>
+		<a href="#" class="behavior"></a>
+		<section data-0p="transform:translate(0,0%)" data-100p="transform:translate(0,0%)" id="home">
 		<div class="content">
 			<div class="cont2">
 				<img src="./assets/imagen.png">
 			</div>	
 		</div>
 		</section>
-		<section id="films">
+		<section data-100p="transform:translate(0,100%)" data-200p="transform:translate(0,0%)" id="films">
 			<div class="content">
 				<div class="cont2">
 					<div class="carnita">
 						<nav>
 						<ul>
-							<li class="logo1 active">Camaleon<span>Films</span></li>
+							<li data-100p="color:rgb(255,255,255)" data-200p="color:rgb(154,152,152)" class="logo1 active">Camaleon<span>Films</span></li>
 							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
 							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
 							<li class="logo4">CNK<span id="pleca3">POST</span></li>
@@ -34,19 +35,20 @@
 							<source src="assets/videos/films.webm" type="video/webm">
 							<source src="assets/videos/films.mp4" type="video/mp4">
 						</video>
-						<a href="#"><img class="home" src="./assets/home.png"></a>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>
 				</div>	
 			</div>	
 		</section>
+		<!--
 		<section id="contenidos">
 			<div class="content">
 				<div class="cont2">	
 					<div class="carnita">
 						<nav>
 						<ul>
-							<li class="logo1 active">Camaleon<span>Films</span></li>
-							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
+							<li class="logo1">Camaleon<span>Films</span></li>
+							<li class="logo2 active">Camaleon<span id="pleca1">Contenidos</span></li>
 							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
 							<li class="logo4">CNK<span id="pleca3">POST</span></li>
 							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
@@ -57,7 +59,7 @@
 							<source src="assets/videos/contenidos.webm" type="video/webm">
 							<source src="assets/videos/contenidos.mp4" type="video/mp4">
 						</video>
-						<a href="#"><img class="home" src="./assets/home.png"></a>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>	
 				</div>	
 			</div>
@@ -68,9 +70,9 @@
 					<div class="carnita">
 						<nav>
 						<ul>
-							<li class="logo1 active">Camaleon<span>Films</span></li>
+							<li class="logo1">Camaleon<span>Films</span></li>
 							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
-							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
+							<li class="logo3 active">Camaleon<span id="pleca2">2.1</span></li>
 							<li class="logo4">CNK<span id="pleca3">POST</span></li>
 							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
 						</ul>
@@ -80,7 +82,7 @@
 							<source src="assets/videos/digital.webm" type="video/webm">
 							<source src="assets/videos/digital.mp4" type="video/mp4">
 						</video>
-						<a href="#"><img class="home" src="./assets/home.png"></a>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>	
 				</div>	
 			</div>		
@@ -91,10 +93,10 @@
 					<div class="carnita">
 						<nav>
 						<ul>
-							<li class="logo1 active">Camaleon<span>Films</span></li>
+							<li class="logo1">Camaleon<span>Films</span></li>
 							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
 							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
-							<li class="logo4">CNK<span id="pleca3">POST</span></li>
+							<li class="logo4 active">CNK<span id="pleca3">POST</span></li>
 							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
 						</ul>
 						</nav>	
@@ -103,7 +105,7 @@
 							<source src="assets/videos/cnk.webm" type="video/webm">
 							<source src="assets/videos/cnk.mp4" type="video/mp4">
 						</video>
-						<a href="#"><img class="home" src="./assets/home.png"></a>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>	
 				</div>	
 			</div>	
@@ -114,11 +116,11 @@
 					<div class="carnita">
 						<nav>
 						<ul>
-							<li class="logo1 active">Camaleon<span>Films</span></li>
+							<li class="logo1">Camaleon<span>Films</span></li>
 							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
 							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
 							<li class="logo4">CNK<span id="pleca3">POST</span></li>
-							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
+							<li class="logo5 active">Camaleon<span id="pleca4">Merida</span></li>
 						</ul>
 						</nav>	
 						<h2>Camaleon Merida</h2>
@@ -126,10 +128,17 @@
 							<source src="assets/videos/cornilla-corta.webm" type="video/webm">
 							<source src="assets/videos/cornilla-corta.mp4" type="video/mp4">
 						</video>
-						<a href="#"><img class="home" src="./assets/home.png"></a>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>		
 				</div>	
 			</div>		
 		</section>
+		-->
+		<script type="text/javascript">
+			skrollr.init({
+				smoothScrolling: true,
+				mobileDeceleration: 0.004
+			});
+		</script>
 	</body>
 </html>

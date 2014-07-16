@@ -2,49 +2,58 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-<style>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+	</head>	
+	<style>
+
 	*{
-		margin: 0px;
-		padding: 0px; 
+		margin: 0;
+		padding: 0;
 	}
-	body{
+
+	body {
 		width: 100%;
 		height: 100%;
-		background: url(./assets/fondo_verde.jpg) repeat;
-	}
-	.contenido {
-		background: url(../assets/fondo-lineas.png) no-repeat;
-		width: 1150px;
-		height: 750px;
-		margin: auto;
-		position: relative;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
-	.cont1 {
-		background:  #0000;
-		position: absolute;
-		top: 22px;
-		width: 1150px;
-		height: 706px;
-	}		
-	.cont2 {
-		z-index: 1;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		}		
+		background: url(./assets/patron-verde.png) repeat;
+
+		}
+
+		.content{
+			background: url(./assets/fondo-lineas.png) no-repeat;
+			width: 1150px;
+			height: 625px;
+			margin: auto;
+			position: relative;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			}
+		.cont2 {
+			background:  #fff;
+			position: absolute;
+			top: 22px;
+			width: 1150px;
+			height: 625px;
+		}
+		.carnita{
+			z-index: 1;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			}	
+
+
+
 			a{
 				color: #fff;
 				text-decoration: none;
 				text-shadow: 1px 1px 8px black;
 			}
 			a.suscribir{
-				background: url(./assets/caja_verde.png) no-repeat;
+				background: url(./assets/caja_verde.png) repeat;
 				padding: 17px 96px 44px 19px;
 				position: fixed;
 				top: 0px;
@@ -81,12 +90,14 @@
 			}
 			ul{
 				list-style: none;
-				margin-top: 121px;
+				margin: 0px;
+				padding: 0px;
+				margin-top: 58px;
 				font-size: 23px;
 				font-family: sans-serif;
 			}
 			li{
-				margin: 74px 0px 0px 135px;
+				margin: 70px 0px 0px 20px;
 			}
 			li.logo1{
 				background: url(./assets/logo_1.png) no-repeat;
@@ -120,62 +131,66 @@
 			#pleca{
 				background: url(./assets/pleca.png) no-repeat;
 				position: absolute;
-				top: 151px;
-				left: 242px;
+				top: 92px;
+				left: 76px;
 				width: 170px;
 				padding-left: 89px;	
 			}
 			#pleca1{
 				background: url(./assets/pleca.png) no-repeat;
 				position: absolute;
-				top: 276px;
-				left: 242px;
+				top: 212px;
+				left: 76px;
 				width: 170px;
 				padding-left: 27px;	
 			}
 			#pleca2{
 				background: url(./assets/pleca.png) no-repeat;
 				position: absolute;
-				top: 399px;
-				left: 242px;
+				top: 451px;
+				left: 76px;
 				width: 170px;
 				padding-left: 116px;	
 			}
 			#pleca3{
 				background: url(./assets/pleca.png) no-repeat;
 				position: absolute;
-				top: 524px;
-				left: 242px;
+				top: 331px;
+				left: 76px;
 				width: 170px;
 				padding-left: 83px;	
 			}
 			#pleca4{
 				background: url(./assets/pleca.png) no-repeat;
 				position: absolute;
-				top: 647px;
-				left: 242px;
+				top: 572px;
+				left: 76px;
 				width: 170px;
 				padding-left: 73px;	
 			}
 			img.home{
-				padding: 0px 0px 0px 1107px;
 				position: absolute;
-				bottom: 0;
-			}
+				width: 140px;
+				height: 90px;
+				margin-top: -29px;
+				margin-left: 1014px;
+				z-index: 2;
+			}	
 			h2{
 				right: 250px;
-				top: 17px;
-				position: fixed;
+				top: 48px;
 				font-size: 45px;
 				font-family: sans-serif;
 				width: 215px;
 				text-align: right;
+				position: absolute;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="contenido">
-			<div class="cont1">
+		<div class="content">
+			<div class="cont2">
+				<div class="carnita">
 					<a href="" class="suscribir"><span class="suscribe">Suscribete</span></a>
 					<a href="" class="siguenos"><span class="sigue">Siguenos</span></a>
 					<a href="" class="comparte"><span class="compart">Comparte</span></a>
@@ -189,13 +204,130 @@
 								<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
 							</ul>
 						</nav>
-					<section>
-						<h2>Camaleon Merida</h2>
-					<section>
-							<a href="#"><img class="home" src="./assets/home.png"></a>
+						<section>
+							<h2>¿Quienes somos?</h2>
+						</section>
+						<a href="#"><img class="home" src="./assets/home.png"></a>
 					</section>
 				</div>
-			</div>
+			</div>		
 		</div>		
+		<div class="content">
+			<div class="cont2">
+				<div class="carnita">
+					<a href="" class="suscribir"><span class="suscribe">Suscribete</span></a>
+					<a href="" class="siguenos"><span class="sigue">Siguenos</span></a>
+					<a href="" class="comparte"><span class="compart">Comparte</span></a>
+					<section class="main">
+						<nav>
+							<ul>
+								<li class="logo1">Camaleon<span id="pleca">Films</span></li>
+								<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
+								<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
+								<li class="logo4">CNK<span id="pleca3">POST</span></li>
+								<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
+							</ul>
+						</nav>
+						<section>
+							<h2>¿Por qué Merida?</h2>
+						</section>
+						<a href="#"><img class="home" src="./assets/home.png"></a>
+					</section>
+				</div>
+			</div>		
+		</div>		
+		<div class="content">
+			<div class="cont2">
+				<div class="carnita">
+					<a href="" class="suscribir"><span class="suscribe">Suscribete</span></a>
+					<a href="" class="siguenos"><span class="sigue">Siguenos</span></a>
+					<a href="" class="comparte"><span class="compart">Comparte</span></a>
+					<section class="main">
+						<nav>
+							<ul>
+								<li class="logo1">Camaleon<span id="pleca">Films</span></li>
+								<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
+								<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
+								<li class="logo4">CNK<span id="pleca3">POST</span></li>
+								<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
+							</ul>
+						</nav>
+						<section>
+							<h2>Experiencia</h2>
+						</section>
+						<a href="#"><img class="home" src="./assets/home.png"></a>
+					</section>
+				</div>
+			</div>		
+		</div>	
+		<div class="content">
+			<div class="cont2">
+				<div class="carnita">
+					<a href="" class="suscribir"><span class="suscribe">Suscribete</span></a>
+					<a href="" class="siguenos"><span class="sigue">Siguenos</span></a>
+					<a href="" class="comparte"><span class="compart">Comparte</span></a>
+					<section class="main">
+						<nav>
+							<ul>
+								<li class="logo1">Camaleon<span id="pleca">Films</span></li>
+								<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
+								<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
+								<li class="logo4">CNK<span id="pleca3">POST</span></li>
+								<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
+							</ul>
+						</nav>
+						<section>
+							<article>
+							<h2>Locaciones</h2>
+								<input type="" class="buscar">
+								<input type="checkbox" name="opcion 1" class="caja">
+								<label class="titulo">opcion 1</label>
+								<input type="checkbox" name="opcion 2" class="caja1">
+								<label class="titulo1">opcion 2</label>
+								<input type="checkbox" name="opcion 3" class="caja2">
+								<label class="titulo2">opcion 3</label>
+							</article>
+							<article>
+								<div class="cuadro1"></div>
+								<div class="cuadro2"></div>
+								<div class="cuadro3"></div>
+								<div class="cuadro4"></div>
+								<div class="cuadro5"></div>
+								<div class="cuadro6"></div>
+								<div class="cuadro7"></div>
+								<div class="cuadro8"></div>
+								<div class="cuadro9"></div>
+								<div class="cuadro10"></div>
+							</article>
+						</section>
+						<a href="#"><img class="home" src="./assets/home.png"></a>
+					</section>	
+				</div>
+			</div>		
+		</div>	
+		<div class="content">
+			<div class="cont2">
+				<div class="carnita">
+					<a href="" class="suscribir"><span class="suscribe">Suscribete</span></a>
+					<a href="" class="siguenos"><span class="sigue">Siguenos</span></a>
+					<a href="" class="comparte"><span class="compart">Comparte</span></a>
+					<section class="main">
+						<nav>
+							<ul>
+								<li class="logo1">Camaleon<span id="pleca">Films</span></li>
+								<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
+								<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
+								<li class="logo4">CNK<span id="pleca3">POST</span></li>
+								<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
+							</ul>
+						</nav>
+						<section>
+							<h2>Camaleon Merida</h2>
+						</section>
+						<a href="#"><img class="home" src="./assets/home.png"></a>
+					</section>
+				</div>
+			</div>		
+		</div>
 	</body>
 </html>

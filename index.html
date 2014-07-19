@@ -1,38 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.appcache">
 	<head>
 		<meta charset="utf-8">
+		<!--<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">-->
 		<link rel="stylesheet" type="text/less" href="styles/style.less">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="./scripts/lib/skrollr.min.js"></script>
+		<script src="./scripts/lib/skrollr.menu.min.js"></script>
+		<script src="./scripts/main.js"></script>
 	</head>
 	<body>
-		<a href="#" class="behavior suscribir">
-			<img data-0p="transform:translate(0,0%)" data-100p="opacity:1;transform:translate(0,0%)" data-200p="opacity:0" src="./assets/camaleon_suscribete.png">
-			<img data-100p="transform:translate(0,-100%)" data-200p="opacity:1;transform:translate(0,0%)" data-300p="opacity:0" src="./assets/camaleon_suscribete.png">
-			<img data-200p="transform:translate(0,-100%)" data-300p="opacity:1;transform:translate(0,0%)" data-400p="opacity:0" src="./assets/contenidos_suscribete.png">
-			<img data-300p="transform:translate(0,-100%)" data-400p="opacity:1;transform:translate(0,0%)" data-500p="opacity:0" src="./assets/2.1_suscribete.png">
-			<img data-400p="transform:translate(0,-100%)" data-500p="opacity:1;transform:translate(0,0%)" data-600p="opacity:0" src="./assets/cnk_suscribete.png">
-			<img data-500p="transform:translate(0,-100%)" data-600p="opacity:1;transform:translate(0,0%)" src="./assets/merida_suscribete.png">
-			
-		</a>
-		<a href="#" class="behavior compartir">
-			<img data-0p="transform:translate(0,0%)" data-100p="opacity:1;transform:translate(0,0%)" data-200p="opacity:0" src="./assets/camaleon_comparte.png">
-			<img data-100p="transform:translate(100%,0)" data-200p="opacity:1;transform:translate(0,0%)" data-300p="opacity:0" src="./assets/camaleon_comparte.png">
-			<img data-200p="transform:translate(100%,0)" data-300p="opacity:1;transform:translate(0,0%)" data-400p="opacity:0" src="./assets/contenidos_comparte.png">
-			<img data-300p="transform:translate(100%,0)" data-400p="opacity:1;transform:translate(0,0%)" data-500p="opacity:0" src="./assets/2.1_comparte.png">
-			<img data-400p="transform:translate(100%,0)" data-500p="opacity:1;transform:translate(0,0%)" data-600p="opacity:0" src="./assets/cnk_comparte.png">
-			<img data-500p="transform:translate(100%,0)" data-600p="transform:translate(0,0%)" src="./assets/merida_comparte.png">
-		</a>
-		<a href="#" class="behavior siguenos" >
-			<img data-0p="transform:translate(0,0%)" data-100p="opacity:1;transform:translate(0,0%)" data-200p="opacity:0" src="./assets/camaleon_siguenos.png">
-			<img data-100p="transform:translate(0,-100%)" data-200p="opacity:1;transform:translate(0,0%)" data-300p="opacity:0" src="./assets/camaleon_siguenos.png">
-			<img data-200p="transform:translate(0,-100%)" data-300p="opacity:1;transform:translate(0,0%)" data-400p="opacity:0" src="./assets/contenidos_siguenos.png">
-			<img data-300p="transform:translate(0,-100%)" data-400p="opacity:1;transform:translate(0,0%)" data-500p="opacity:0" src="./assets/2.1_siguenos.png">
-			<img data-400p="transform:translate(0,-100%)" data-500p="opacity:1;transform:translate(0,0%)" data-600p="opacity:0" src="./assets/cnk_siguenos.png">
-			<img data-500p="transform:translate(0,-100%)" data-600p="opacity:1;transform:translate(0,0%)" src="./assets/merida_siguenos.png">
-		</a>
-
+		<div class="behavior suscribir">
+			<a class="suscribir-trigger" href="#">
+				<img data-0p="transform:translate(0,0%)" data-100p="opacity:1;transform:translate(0,0%)" data-200p="opacity:0" src="./assets/1B_suscribete.png">
+				<img data-100p="transform:translate(0,-100%)" data-200p="opacity:1;transform:translate(0,0%)" data-300p="opacity:0" src="./assets/camaleon_suscribete.png">
+				<img data-200p="transform:translate(0,-100%)" data-300p="opacity:1;transform:translate(0,0%)" data-400p="opacity:0" src="./assets/contenidos_suscribete.png">
+				<img data-300p="transform:translate(0,-100%)" data-400p="opacity:1;transform:translate(0,0%)" data-500p="opacity:0" src="./assets/2.1_suscribete.png">
+				<img data-400p="transform:translate(0,-100%)" data-500p="opacity:1;transform:translate(0,0%)" data-600p="opacity:0" src="./assets/cnk_suscribete.png">
+				<img data-500p="transform:translate(0,-100%)" data-600p="opacity:1;transform:translate(0,0%)" src="./assets/merida_suscribete.png">
+			</a>
+			<div class="suscribir-formulario">
+				<form>
+					<input class="mail" type="text" name="mail">
+					<input class="name" type="text" name="name">
+					<input class="button" type="submit">
+				</form>
+			</div>
+		</div>
+		<div class="behavior compartir">
+			<a class="compartir-trigger" href="#">
+				<img data-0p="transform:translate(0,0%)" data-100p="opacity:1;transform:translate(0,0%)" data-200p="opacity:0" src="./assets/1B_comparte.png">
+				<img data-100p="transform:translate(100%,0)" data-200p="opacity:1;transform:translate(0,0%)" data-300p="opacity:0" src="./assets/camaleon_comparte.png">
+				<img data-200p="transform:translate(100%,0)" data-300p="opacity:1;transform:translate(0,0%)" data-400p="opacity:0" src="./assets/contenidos_comparte.png">
+				<img data-300p="transform:translate(100%,0)" data-400p="opacity:1;transform:translate(0,0%)" data-500p="opacity:0" src="./assets/2.1_comparte.png">
+				<img data-400p="transform:translate(100%,0)" data-500p="opacity:1;transform:translate(0,0%)" data-600p="opacity:0" src="./assets/cnk_comparte.png">
+				<img data-500p="transform:translate(100%,0)" data-600p="transform:translate(0,0%)" src="./assets/merida_comparte.png">
+			</a>
+			<!--<a class="compartir-iconos yt" href="#"><img src="./assets/youtube_ico.png"></a>-->
+			<a class="compartir-iconos fb" href="#"><img src="./assets/facebook_ico.png"></a>
+			<a class="compartir-iconos tw" href="#"><img src="./assets/twitter_ico.png"></a>
+			<a class="compartir-iconos gp" href="#"><img src="./assets/g+_ico.png"></a>
+			<!--<a class="compartir-iconos vi" href="#"><img src="./assets/vimeo_ico.png"></a>-->
+		</div>
+		<div class="behavior siguenos">
+			<a class="seguir-trigger" href="#">
+				<img data-0p="transform:translate(0,0%)" data-100p="opacity:1;transform:translate(0,0%)" data-200p="opacity:0" src="./assets/1B_siguenos.png">
+				<img data-100p="transform:translate(100%,0)" data-200p="opacity:1;transform:translate(0,0%)" data-300p="opacity:0" src="./assets/camaleon_siguenos.png">
+				<img data-200p="transform:translate(100%,0)" data-300p="opacity:1;transform:translate(0,0%)" data-400p="opacity:0" src="./assets/contenidos_siguenos.png">
+				<img data-300p="transform:translate(100%,0)" data-400p="opacity:1;transform:translate(0,0%)" data-500p="opacity:0" src="./assets/2.1_siguenos.png">
+				<img data-400p="transform:translate(100%,0)" data-500p="opacity:1;transform:translate(0,0%)" data-600p="opacity:0" src="./assets/cnk_siguenos.png">
+				<img data-500p="transform:translate(100%,0)" data-600p="opacity:1;transform:translate(0,0%)" src="./assets/merida_siguenos.png">
+			</a>
+			<div class="siguenos-content">
+				<img src="./assets/sigue-home.png">
+				<img src="./assets/sigue-camaleon.png">
+				<img src="./assets/sigue-contenidos.png">
+				<img src="./assets/sigue-2.1.png">
+				<img src="./assets/sigue-cnk.png">
+				<img src="./assets/sigue-merida.png">
+				<ul class="siguenos_iconos">
+					<li><a href="http://youtube.com" target="_blank"><img class="si_youtu" src="./assets/youtube_ico.png"></li></a>
+					<li><a href="http://facebook.com" target="_blank"><img class="si_face" src="./assets/facebook_ico.png"></li></a>
+					<li><a href="http://twitter.com" target="_blank"><img class="si_twi" src="./assets/twitter_ico.png"></li></a>
+					<li><a href="http://vimeo.com" target="_blank"><img class="si_vim" src="./assets/vimeo_ico.png"></li></a>
+				</ul>
+			</div>
+		</div>
 		<section data-0p="transform:translate(0,0%)" data-100p="transform:translate(0,0%)" id="home">
 		<div class="content">
 			<div class="cont2">
@@ -45,18 +80,19 @@
 				<div class="cont2">
 					<div class="carnita">
 						<nav>
-						<ul>
-							<li data-100p="color:rgb(255,255,255)" data-200p="color:rgb(154,152,152)" class="logo1 active">Camaleon<span>Films</span></li>
-							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
-							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
-							<li class="logo4">CNK<span id="pleca3">POST</span></li>
-							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
-						</ul>
+							<ul>
+								<li class="logo1 active"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+								<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+								<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+								<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+								<li class="logo5"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+							</ul>
 						</nav>
 						<h2>Camaleon Films</h2>
-						<video autoplay muted loop poster="assets/videos/films.jpg" class="bgvid">
+						<video autoplay muted loop poster="assets/videos/films.png" class="bgvid">
 							<source src="assets/videos/films.webm" type="video/webm">
 							<source src="assets/videos/films.mp4" type="video/mp4">
+							<source src="assets/videos/films.ogg" type="video/ogg">
 						</video>
 						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>
@@ -68,18 +104,19 @@
 				<div class="cont2">	
 					<div class="carnita">
 						<nav>
-						<ul>
-							<li class="logo1">Camaleon<span>Films</span></li>
-							<li data-100p="color:rgb(255,255,255)" data-200p="color:rgb(154,152,152)" class="logo2 active">Camaleon<span id="pleca1">Contenidos</span></li>
-							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
-							<li class="logo4">CNK<span id="pleca3">POST</span></li>
-							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
-						</ul>
+							<ul>
+								<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+								<li class="logo2 active"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+								<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+								<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+								<li class="logo5"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+							</ul>
 						</nav>
 						<h2>Camaleon Contenidos</h2>
-						<video autoplay muted loop poster="assets/videos/contenidos.jpg" class="bgvid">
+						<video autoplay muted loop poster="assets/videos/contenidos.png" class="bgvid">
 							<source src="assets/videos/contenidos.webm" type="video/webm">
 							<source src="assets/videos/contenidos.mp4" type="video/mp4">
+							<source src="assets/videos/contenidos.ogg" type="video/ogg">
 						</video>
 						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>	
@@ -91,18 +128,19 @@
 				<div class="cont2">		
 					<div class="carnita">
 						<nav>
-						<ul>
-							<li class="logo1">Camaleon<span>Films</span></li>
-							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
-							<li data-100p="color:rgb(255,255,255)" data-200p="color:rgb(154,152,152)" class="logo3 active">Camaleon<span id="pleca2">2.1</span></li>
-							<li class="logo4">CNK<span id="pleca3">POST</span></li>
-							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
-						</ul>
+							<ul>
+								<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+								<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+								<li class="logo3 active"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+								<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+								<li class="logo5"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+							</ul>
 						</nav>	
 						<h2>Camaleon 2.1</h2>
-						<video autoplay muted loop poster="assets/videos/digital.jpg" class="bgvid">
+						<video autoplay muted loop poster="assets/videos/digital.png" class="bgvid">
 							<source src="assets/videos/digital.webm" type="video/webm">
 							<source src="assets/videos/digital.mp4" type="video/mp4">
+							<source src="assets/videos/digital.ogg" type="video/ogg">
 						</video>
 						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>	
@@ -114,52 +152,185 @@
 				<div class="cont2">	
 					<div class="carnita">
 						<nav>
-						<ul>
-							<li class="logo1">Camaleon<span>Films</span></li>
-							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
-							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
-							<li data-100p="color:rgb(255,255,255)" data-200p="color:rgb(154,152,152)" class="logo4 active">CNK<span id="pleca3">POST</span></li>
-							<li class="logo5">Camaleon<span id="pleca4">Merida</span></li>
-						</ul>
+							<ul>
+								<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+								<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+								<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+								<li class="logo4 active"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+								<li class="logo5"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+							</ul>
 						</nav>	
 						<h2>CNK POST</h2>
-						<video autoplay muted loop poster="assets/videos/cnk.jpg" class="bgvid">
+						<video autoplay muted loop poster="assets/videos/cnk.png" class="bgvid">
 							<source src="assets/videos/cnk.webm" type="video/webm">
 							<source src="assets/videos/cnk.mp4" type="video/mp4">
+							<source src="assets/videos/cnk.ogg" type="video/ogg">
 						</video>
 						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>	
 				</div>	
 			</div>	
 		</section> 
+		<!--
 		<section  data-500p="transform:translate(0,100%)" data-600p="transform:translate(0,0%)" id="merida">
 			<div class="content">
 				<div class="cont2">	
 					<div class="carnita">
 						<nav>
-						<ul>
-							<li class="logo1">Camaleon<span>Films</span></li>
-							<li class="logo2">Camaleon<span id="pleca1">Contenidos</span></li>
-							<li class="logo3">Camaleon<span id="pleca2">2.1</span></li>
-							<li class="logo4">CNK<span id="pleca3">POST</span></li>
-							<li data-100p="color:rgb(255,255,255)" data-200p="color:rgb(154,152,152)" class="logo5 active">Camaleon<span id="pleca4">Merida</span></li>
-						</ul>
+							<ul>
+								<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+								<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+								<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+								<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+								<li class="logo5 active"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+							</ul>
 						</nav>	
 						<h2>Camaleon Merida</h2>
 						<video autoplay muted loop poster="assets/videos/cornilla-corta.jpg" class="bgvid">
-							<source src="assets/videos/cornilla-corta.webm" type="video/webm">
-							<source src="assets/videos/cornilla-corta.mp4" type="video/mp4">
+							<source src="assets/videos/merida.webm" type="video/webm">
+							<source src="assets/videos/merida.mp4" type="video/mp4">
+							<source src="assets/videos/merida.mp4" type="video/ogg">
 						</video>
 						<a class="home" href="#"><img src="./assets/home.png"></a>
 					</div>		
 				</div>	
 			</div>		
 		</section>
-		<script type="text/javascript">
-			skrollr.init({
-				smoothScrolling: true,
-				mobileDeceleration: 0.004
-			});
-		</script>
+		-->
+		<section data-500p="transform:translate(0,100%)" data-600p="transform:translate(0,0%)" class="merida">
+			<div class="content">
+				<div class="cont2">
+					<div class="carnita">
+						<nav>
+						<ul>
+							<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+							<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+							<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+							<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+							<li class="logo5 active"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+						</ul>
+						</nav>
+						<h2>¿Quienes Somos?</h2>
+						<video autoplay muted loop poster="assets/videos/merida.png" class="bgvid">
+							<source src="assets/videos/merida.webm" type="video/webm">
+							<source src="assets/videos/merida.mp4" type="video/mp4">
+							<source src="assets/videos/merida.mp4" type="video/ogg">
+						</video>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
+					</div>
+				</div>	
+			</div>	
+		</section>
+		<section data-600p="transform:translate(100%,0)" data-700p="transform:translate(0%,0)" class="merida">
+			<div class="content">
+				<div class="cont2">	
+					<div class="carnita">
+						<nav>
+						<ul>
+							<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+							<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+							<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+							<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+							<li class="logo5 active"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+						</ul>
+						</nav>
+						<h2>¿Por que Merida?</h2>
+						<video autoplay muted loop poster="assets/videos/merida.png" class="bgvid">
+							<source src="assets/videos/merida.webm" type="video/webm">
+							<source src="assets/videos/merida.mp4" type="video/mp4">
+							<source src="assets/videos/merida.mp4" type="video/ogg">
+						</video>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
+					</div>	
+				</div>	
+			</div>
+		</section>
+		<section data-700p="transform:translate(100%,0)" data-800p="transform:translate(0%,0)" class="merida">
+			<div class="content">
+				<div class="cont2">		
+					<div class="carnita">
+						<nav>
+						<ul>
+							<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+							<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+							<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+							<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+							<li class="logo5 active"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+						</ul>
+						</nav>	
+						<h2>Experiencia</h2>
+						<video autoplay muted loop poster="assets/videos/merida.png" class="bgvid">
+							<source src="assets/videos/merida.webm" type="video/webm">
+							<source src="assets/videos/merida.mp4" type="video/mp4">
+							<source src="assets/videos/merida.ogg" type="video/ogg">
+						</video>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
+					</div>	
+				</div>	
+			</div>		
+		</section>
+		<section  data-800p="transform:translate(100%,0)" data-900p="transform:translate(0%,0)" class="merida">
+			<div class="content">
+				<div class="cont2">	
+					<div class="carnita">
+						<nav>
+						<ul>
+							<li class="logo1"><a href="#camaleon" data-menu-top="200p">Camaleon<span>Films</span></a></li>
+							<li class="logo2"><a href="#contenidos" data-menu-top="300p">Camaleon<span id="pleca1">Contenidos</span></a></li>
+							<li class="logo3"><a href="#dospuntouno" data-menu-top="400p">Camaleon<span id="pleca2">2.1</span></a></li>
+							<li class="logo4"><a href="#cnk" data-menu-top="500p">CNK<span id="pleca3">POST</span></a></li>
+							<li class="logo5 active"><a href="#merida" data-menu-top="600p">Camaleon<span id="pleca4">Merida</span></a></li>
+						</ul>
+						</nav>	
+						<h2>Locaciones</h2>
+						<article>
+							<form>
+								<input type="text" placeholder="Buscar" class="buscar">
+								<div class="boxes">
+									<div data-filter="uno" class="squarebox">
+										<input type="checkbox" id="check1">
+										<label for="check1"></label>
+										<p>Filtro 1</p>
+									</div>
+									<div data-filter="dos" class="squarebox">
+										<input type="checkbox" id="check2">
+										<label for="check2"></label>
+										<p>Filtro 2</p>
+									</div>
+									<div data-filter="tres" class="squarebox">
+										<input type="checkbox" id="check3">
+										<label for="check3"></label>
+										<p>Filtro 3</p>
+									</div>
+								</div>
+							</form>
+							<ul id="locations">
+								<li class="uno playa"></li>
+								<li class="uno casa"></li>
+								<li class="uno departamento"></li>
+								<li class="uno playa"></li>
+								<li class="uno playa"></li>
+								<li class="dos playa"></li>
+								<li class="dos playa"></li>
+								<li class="dos playa"></li>
+								<li class="dos departamento"></li>
+								<li class="dos departamento"></li>
+								<li class="tres departamento"></li>
+								<li class="tres casa"></li>
+								<li class="tres casa"></li>
+								<li class="tres casa"></li>
+								<li class="tres otra"></li>
+							</ul>
+						</article>
+						<video autoplay muted loop poster="assets/videos/merida.png" class="bgvid">
+							<source src="assets/videos/merida.webm" type="video/webm">
+							<source src="assets/videos/merida.mp4" type="video/mp4">
+							<source src="assets/videos/merida.mp4" type="video/ogg">
+						</video>
+						<a class="home" href="#"><img src="./assets/home.png"></a>
+					</div>		
+				</div>	
+			</div>		
+		</section>
 	</body>
 </html>

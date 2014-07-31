@@ -430,6 +430,11 @@ section {
 .rotate(){
 	-webkit-transform: rotate(-90deg);
 }
+@media (max-width: 768px){
+	section#home img{
+		right: 300px;
+	}
+}
 @media (max-width: 490px){
 	section#home img {
 		height: 65%;
@@ -437,5 +442,27 @@ section {
 		right: 572px;
 		bottom: 58px;
 		position: absolute;
+	}
+}
+@media (max-width: 320px){
+	div.behavior.suscribir{
+		right: 0px; 
+	}
+	section#home img {
+		height: 45%;
+		left: -90px;
+		right: 681px;
+		bottom: 221px;
+		position: absolute;
+	}
+	element.style {
+}
+	nav ul {
+		margin-left: -58px;
+	}
+	nav ul li {
+		margin-bottom: 0px;
+		font-size: 13px;
+		height: 50px;
 	}
 }

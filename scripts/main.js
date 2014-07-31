@@ -27,7 +27,31 @@ $(document).ready(function(){
 		mobileDeceleration: 0.004
 	});
 	skrollr.menu.init(s);
-	
+	//===== Menú =====
+	var visible = 0;
+	$(".menu-trigger").on("click", function(e){
+		e.preventDefault();
+		if(visible == 0){
+			muestraMenu();
+		}
+		else{
+			ocultaMenu();
+		}
+		console.log(visible);
+	});
+
+	function muestraMenu(){
+		visible = 1;
+		$(".carnita nav ul").css({
+			display: "block"
+		});
+	}
+	function ocultaMenu(){
+		visible = 0;
+		$(".carnita nav ul").css({
+			display: "none"
+		});
+	}
 	//===== Compartir =====
 	$(".compartir-trigger").on("click", function(e){
 		e.preventDefault();

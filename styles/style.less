@@ -430,20 +430,88 @@ section {
 .rotate(){
 	-webkit-transform: rotate(-90deg);
 }
+/*------------------------------------------------- IPAD */
 @media (max-width: 768px){
-	section#home img{
-		right: 300px;
+	section#home img {
+		height: 110%;
+		left: -46px;
+		right: 297px;
+		top: 136px;
+	}
+		div.behavior.menu{
+		display: none;
+	}
+	section {
+		padding: 95px 0 100px;
+	}
+	nav ul {
+		list-style: none;
+		font-size: 19px;
+		font-family: sans-serif;
+		margin-left: -50px;
 	}
 }
-@media (max-width: 490px){
+/*------------------------------------------------- CELULAR */
+@media (max-width: 640px){
 	section#home img {
-		height: 65%;
-		left: -16px;
+		height: 96%;
+		left: -62px;
+		right: 572px;
+		bottom: 0px;
+		position: absolute;
+		top: 150px;
+	}
+	div.behavior.suscribir {
+		right: 190px;
+	}
+	div.behavior.siguenos {
+		top: 97px;
+	}
+	div.behavior.menu{
+		margin: 25px;
+	}
+	div.behavior.menu img{
+		padding-bottom: 30px;
+	}
+	nav ul {
+		margin-left: -58px;
+	}
+	section {
+		padding: 70px 0 100px;
+	}
+}
+/*------------------------------------------------- CELULAR */
+@media (max-width: 480px){
+	section#home img {
+		height: 70%;
+		left: -40px;
 		right: 572px;
 		bottom: 58px;
 		position: absolute;
+		top: 0px;
+	}
+	div.behavior.suscribir {
+		right: 110px;
+	}
+	div.behavior.menu{
+		margin: 10px;
+	}
+	div.behavior.menu img{
+		padding-bottom: 11px;
+	}
+	nav ul {
+		margin-left: -58px;
+	}
+	/*nav ul li {
+		margin-bottom: 0px;
+		font-size: 13px;
+		height: 50px;
+	}*/
+	section {
+		padding: 46px 0 100px;
 	}
 }
+/*------------------------------------------------- CELULAR */
 @media (max-width: 320px){
 	div.behavior.suscribir{
 		right: 0px; 
@@ -452,8 +520,9 @@ section {
 		height: 45%;
 		left: -90px;
 		right: 681px;
-		bottom: 221px;
+		bottom: 300px;
 		position: absolute;
+		top: 0px;
 	}
 	element.style {
 }
@@ -465,4 +534,14 @@ section {
 		font-size: 13px;
 		height: 50px;
 	}
+	div.behavior.menu{
+		margin: 10px;
+	}
+	div.behavior.menu img{
+		padding-bottom: 11px;
+	}
+	section {
+		padding: 40px 0 100px;
+	}
 }
+/*-------------------------------------------------*/

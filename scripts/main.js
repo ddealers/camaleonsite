@@ -29,6 +29,11 @@ $(document).ready(function(){
 	skrollr.menu.init(s);
 	//===== Menú =====
 	var visible = 0;
+	if(detectmob()){
+		$(".carnita nav ul").css({
+			display: "none"
+		});
+	}
 	$(".menu-trigger").on("click", function(e){
 		e.preventDefault();
 		if(visible == 0){
@@ -45,11 +50,17 @@ $(document).ready(function(){
 		$(".carnita nav ul").css({
 			display: "block"
 		});
+		$(".carnita article").css({
+			display: "none"
+		});
 	}
 	function ocultaMenu(){
 		visible = 0;
 		$(".carnita nav ul").css({
 			display: "none"
+		});
+		$(".carnita article").css({
+			display: "block"
 		});
 	}
 	//===== Compartir =====
